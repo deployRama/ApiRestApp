@@ -7,7 +7,9 @@ const config = {
   dbHost: process.env.HOST_DB,
   pgAdminEmail: process.env.PGADMIN_DEFAULT_EMAIL,
   pgAdminPassword: process.env.PGADMIN_DEFAULT_PASSWORD,
-  dbPort: process.env.DB_PORT
+  dbPort: process.env.DB_PORT,
+  mailUser: process.env.MAIL_USER,
+  mailPass: process.env.MAIL_PASS
 }
 
 
