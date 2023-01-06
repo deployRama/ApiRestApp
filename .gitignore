@@ -160,3 +160,8 @@ dist
 
 #Postgres
 postgres_data
+nginx/certificates/ca_bundle.crt
+nginx/certificates/certificate.crt
+nginx/certificates/private.key
+v1_0
+.vscode

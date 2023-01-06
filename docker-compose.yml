@@ -6,11 +6,20 @@ services:
     depends_on:
       - postgres
       - pgadmin
+      - nginx
     ports:
       - 3000:3000
     volumes:
       - .:/usr/src
       - /usr/src/node_modules
+
+  nginx:
+    image: nginx:1.22.1-alpine
+    ports:
+      - 443:443
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./nginx/certificates:/etc/ssl
 
   postgres:
     image: postgres:13
