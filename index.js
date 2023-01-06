@@ -9,16 +9,15 @@ const port = process.env.APP_PORT || 3001;
 app.use(express.json());
 
 
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://totheblock.com");
-  res.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-  next();
-})
+const corsOptions = {
+  "origin": ["https://totheblock.com", "https://deployrama.github.io"],
+  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+  "preflightContinue": false,
+  "optionsSuccessStatus": 204
+}
 
-app.get('/', (req, res) => {
-  res.send('We are running...');
-});
+app.use(cors(corsOptions));
+
 
 routerApi(app);
 
