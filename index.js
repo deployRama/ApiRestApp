@@ -10,7 +10,7 @@ app.use(express.json());
 
 
 const corsOptions = {
-  "origin": ["https://totheblock.com", "https://deployrama.github.io"],
+  "origin": ["https://totheblock.com", "https://deployrama.github.io", "https://testing.totheblock.com"],
   "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
   "preflightContinue": false,
   "optionsSuccessStatus": 204
